@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="BLEvel - Das digitale Nivelliersystem für Wohnmobile und Campervans.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLEvel – Rebalance your world</title>
+  <style>
+    /* Grundlegendes Reset und Basis-Stile */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.5;
+    }
+    header, footer, section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Hero-Bereich */
+    .hero {
+      background: url("hero_van_sunset.jpg") center center/cover no-repeat;
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .hero .subtitle {
+      font-size: 1.3rem;
+      font-weight: 300;
+      margin-bottom: 25px;
+      color: #cccccc;
+    }
+    .hero p {
+      margin-bottom: 20px;
+      color: #dddddd;
+    }
+    .hero button {
+      background-color: #1f1f1f;
+      border: none;
+      padding: 15px 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      color: #e0e0e0;
+    }
+    .hero button:hover {
+      background-color: #333333;
+    }
+    .hero .github-link {
+      margin-top: 20px;
+    }
+    .hero .github-link img {
+      height: 40px;
+    }
+
+    /* Section-Stile */
+    .section-dark {
+      background-color: #1e1e1e;
+    }
+    .section-light {
+      background-color: #2a2a2a;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    p {
+      margin-bottom: 15px;
+      color: #cccccc;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 40px;
+      margin-bottom: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888888;
+    }
+
+    /* FAQ-Stile */
+    .faq dt {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    .faq dd {
+      margin-bottom: 10px;
+    }
+
+    /* Scroll-Effekte */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero-Bereich -->
+  <header class="hero fade-in">
+    <div class="hero-content">
+      <h1>„Wir haben das Camper-Leben neu ausgerichtet.“</h1>
+      <h2 class="subtitle">Schluss mit Schräglage.</h2>
+      <p>
+        <strong>BLEvel</strong> ist ein präzises, digitales Nivelliersystem für Wohnmobile und Campervans.
+        Es misst Neigung und überträgt die Daten per Bluetooth Low Energy (BLE)
+        direkt auf dein Smartphone oder Tablet.
+      </p>
+      <button onclick="window.location.href='#was-ist-blevel';">Mehr erfahren</button>
+      <!-- GitHub-Link mit Logo -->
+      <div class="github-link">
+        <a href="https://github.com/matzeknusper/BLEvel" target="_blank">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Was ist BLEvel -->
+  <section id="was-ist-blevel" class="section-light fade-in">
+    <h2>Was ist BLEvel?</h2>
+    <img 
+      src="blevel-produktbild.jpg" 
+      alt="BLEvel Gehäuse" 
+      style="max-width: 500px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); margin: 30px auto;"
+    />
+    <p style="max-width: 700px; margin: 0 auto 15px;">
+      <strong>BLEvel</strong> ist ein präzises, digitales Nivelliersystem zur Erfassung der Schräglage eines Fahrzeugs.
+      Speziell für <strong>Wohnmobile und Campervans</strong> entwickelt, erfasst es die Ausrichtung nach vorne/hinten
+      und zur Seite – und sendet die Werte kabellos per <strong>Bluetooth Low Energy (BLE)</strong> direkt an dein
+      Smartphone oder Tablet.
+    </p>
+    <p style="max-width: 700px; margin: 0 auto;">
+      So weißt du immer ganz genau, wie dein Camper steht – egal ob auf dem Stellplatz, in den Bergen oder am See.
+    </p>
+  </section>
+
+  <!-- Highlights / Vorteile -->
+  <section id="highlights" class="section-dark fade-in">
+    <h2>Highlights / Deine Vorteile mit BLEvel</h2>
+    <ul>
+      <li><strong>Ultraschnelle Messung:</strong> 300 Hz Abtastrate für präzise, verzögerungsfreie Ergebnisse.</li>
+      <li><strong>Sanft geglättet:</strong> Kein Zappeln dank cleverem Filteralgorithmus (gleitender Mittelwert).</li>
+      <li><strong>30 Hz BLE-Übertragung:</strong> Jederzeit aktuelle Werte aufs Smartphone.</li>
+      <li><strong>Kalibrierbar per App:</strong> Einmal gerade ausrichten, speichern, fertig.</li>
+      <li><strong>Dauerhaft gespeichert:</strong> Bleibt erhalten, auch nach Ausschalten.</li>
+      <li><strong>Einfach montieren:</strong> In wenigen Minuten fest verbaut.</li>
+      <li><strong>Misst Pitch &amp; Roll:</strong> Vorne/hinten und seitlich.</li>
+      <li><strong>Minimalistisch und zuverlässig:</strong> Ein Helfer, der dich nicht im Stich lässt.</li>
+    </ul>
+  </section>
+
+  <!-- Warum BLEvel -->
+  <section id="warum-blevel" class="section-light fade-in">
+    <h2>Warum BLEvel?</h2>
+    <p><strong>Nie wieder schiefer Kaffee.</strong> BLEvel sorgt dafür, dass deine Tasse am Morgen auf der Arbeitsplatte nicht mehr wegrollt.</p>
+    <p><strong>Besser schlafen.</strong> Wenn dein Bett gerade steht, wachst du erholter auf – wo auch immer du dich befindest.</p>
+    <p><strong>Einfach smarter campen.</strong> BLEvel ist ein kleines Technik-Highlight, das deinen Alltag spürbar verbessert.</p>
+    <p><strong>Technik, die Spaß macht.</strong> Denn wenn sie hilft, wird’s noch besser.</p>
+  </section>
+
+  <!-- BLEvel im Podcast -->
+  <section id="podcast" class="section-light fade-in">
+    <h2>BLEvel im Podcast</h2>
+    <p>
+      In dieser Folge erfährst du, wie BLEvel entstanden ist, wie es funktioniert  
+      und warum es das Camperleben neu definiert.
+    </p>
+    <audio controls>
+      <source src="blevel-podcast.mp3" type="audio/mpeg">
+      Dein Browser unterstützt das Abspielen dieser Audiodatei leider nicht.
+    </audio>
+  </section>
+
+  <!-- Technologie im Detail -->
+  <section id="technologie" class="section-dark fade-in">
+    <h2>Technologie im Detail</h2>
+    <img 
+      src="BLEvel_detail.png" 
+      alt="BLEvel Tech" 
+      style="max-width: 500px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); margin: 30px auto;"
+    />
+    <p><strong>ESP32-C3 Mikrocontroller:</strong> kümmert sich um Datenverarbeitung und BLE-Funktionalität.</p>
+    <p><strong>LSM6DS3 Sensor (IMU):</strong> hochsensibler 3-Achsen-Beschleunigungssensor, der Pitch und Roll durch Gravitationsanalyse ermittelt.</p>
+    <ul>
+      <li><strong>Abtastrate des Sensors:</strong> 300 Hz </li>
+      <li><strong>Gleitender Mittelwertfilter:</strong> Stabilisiert die Anzeige</li>
+      <li><strong>Datenübertragung via BLE:</strong> 30 Hz </li>
+    </ul>
+  </section>
+
+  <!-- Montage & Kalibrierung -->
+  <section id="montage" class="section-light fade-in">
+    <h2>Einfache Installation und Kalibrierung</h2>
+    <p>
+      Montiere BLEvel möglichst fest mit dem Fahrzeugaufbau, z. B. im Schrankboden oder
+      unter dem Bettkasten. Achte dabei auf eine <strong>waagerechte Montagefläche</strong> 
+      und richte das Gehäuse in Fahrtrichtung aus. Nach dem Einbau kalibrierst du BLEvel,
+      indem du den Camper auf einer absolut ebenen Fläche parkst und in der App den
+      <strong>Kalibrier-Befehl</strong> ausführst. Die aktuelle Lage wird als
+      Nullpunkt gespeichert und bleibt auch nach dem Ausschalten erhalten.
+    </p>
+  </section>
+
+  <!-- Für wen ist BLEvel? -->
+  <section id="fuer-wen" class="section-dark fade-in">
+    <h2>Für Entdecker. Für Bastler. Für alle, die’s gerade mögen.</h2>
+    <p>
+      Ob du weit entfernte Naturcampingplätze ansteuerst oder lieber auf dem Wohnmobil-Stellplatz in der Stadt übernachtest:
+      <strong>BLEvel</strong> macht dir das Leben leichter. Wenn du Spaß an Technik hast, ist es das perfekte DIY-Projekt;
+      wenn du einfach nur einen geraden Schlafplatz suchst, machst du mit BLEvel ebenfalls nichts falsch.
+    </p>
+  </section>
+
+  <!-- App-Funktionen & Bedienung -->
+  <section id="app" class="section-light fade-in">
+    <h2>Steuere dein BLEvel mit der App</h2>
+    <p>Die BLEvel-App ist der Schlüssel zu deiner perfekten Ausrichtung:</p>
+    <ul>
+      <li><strong>Live-Anzeige:</strong> Sieh Pitch &amp; Roll in Echtzeit (30 Hz Aktualisierung).</li>
+      <li><strong>Kalibrierungsfunktion:</strong> Ein Klick, und die aktuelle Lage wird als 0°-Referenz gespeichert.</li>
+      <li><strong>Optionale Einstellungen:</strong> Passe Abtastrate oder Update-Intervall an deine Bedürfnisse an.</li>
+    </ul>
+  </section>
+
+  <!-- Über uns (ohne "Bei Fragen" & Mailadresse) -->
+  <section id="ueber-uns" class="section-dark fade-in">
+    <h2>Designed mit Herz. Entwickelt mit Liebe.</h2>
+    <p>
+      BLEvel ist ein DIY-Projekt von Technikliebhabern für Camping-Enthusiasten.  
+      <strong>Mathias</strong> hat es entwickelt, um den Komfort unterwegs zu erhöhen.
+    </p>
+    <p><strong>„Einfach lächeln – BLEvel hält dich in der Waage.“</strong></p>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-light fade-in">
+    <h2>FAQ</h2>
+    <dl class="faq">
+      <dt>Was ist BLEvel?</dt>
+      <dd>Ein präzises, digitales Nivelliersystem für Wohnmobile und Campervans, das Pitch und Roll misst und per Bluetooth an dein Smartphone sendet.</dd>
+      
+      <dt>Wie funktioniert BLEvel?</dt>
+      <dd>BLEvel nutzt einen hochsensiblen Bewegungssensor (LSM6DS3) und einen ESP32-C3 Mikrocontroller. Die Daten werden 300 Mal pro Sekunde erfasst, gefiltert und 30 Mal pro Sekunde per Bluetooth übertragen.</dd>
+      
+      <dt>Wo kann BLEvel im Fahrzeug montiert werden?</dt>
+      <dd>Bevorzugt auf einer festen, waagerechten Fläche, z. B. im Schrankboden oder unter dem Bettkasten. Die Logo-Seite sollte in Fahrtrichtung zeigen.</dd>
+      
+      <dt>Wie wird BLEvel kalibriert?</dt>
+      <dd>Fahre dein Fahrzeug auf eine absolut ebene Fläche und führe in der BLEvel-App den Kalibrier-Befehl aus. Die aktuellen Messwerte werden als Nullpunkt gespeichert.</dd>
+      
+      <dt>Wie oft werden die Daten in der App aktualisiert?</dt>
+      <dd>Mit 30 Hz – also alle ca. 33 ms – werden die gefilterten Neigungswerte per BLE übertragen.</dd>
+      
+      <dt>Wie genau ist die Messung?</dt>
+      <dd>Dank 300 Hz Abtastrate und Filterung ist sie sehr präzise und nahezu verzögerungsfrei.</dd>
+      
+      <dt>Muss BLEvel nach dem Ausschalten neu kalibriert werden?</dt>
+      <dd>Nein, die Kalibrierung bleibt dauerhaft gespeichert.</dd>
+      
+      <dt>Wo kann ich BLEvel kaufen?</dt>
+      <dd>BLEvel ist derzeit über unseren Online-Shop oder direkt bei uns erhältlich. (Details dazu folgen)</dd>
+    </dl>
+  </section>
+
+  <!-- Footer -->
+  <footer class="fade-in">
+    <p>BLEvel &ndash; Rebalance your world.</p>
+    <p>© 2025 BLEvel</p>
+  </footer>
+
+  <!-- JavaScript für Scroll-Effekte -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const faders = document.querySelectorAll('.fade-in');
+      const appearOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -50px 0px"
+      };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('appear');
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+      
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
+</body>
+</html>
