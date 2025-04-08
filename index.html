@@ -269,6 +269,11 @@
   <!-- App-Funktionen & Bedienung -->
   <section id="app" class="section-light fade-in">
     <h2>Steuere dein BLEvel mit der App</h2>
+<img 
+      src="BLEvel_App.png" 
+      alt="BLEvel App" 
+      style="max-width: 500px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); margin: 30px auto;"
+    />
     <p>Die BLEvel-App ist der Schlüssel zu deiner perfekten Ausrichtung:</p>
     <ul>
       <li><strong>Live-Anzeige:</strong> Sieh Pitch &amp; Roll in Echtzeit (30 Hz Aktualisierung).</li>
@@ -293,34 +298,115 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="section-light fade-in">
-    <h2>FAQ</h2>
-    <dl class="faq">
-      <dt>Was ist BLEvel?</dt>
-      <dd>Ein präzises, digitales Nivelliersystem für Wohnmobile und Campervans, das Pitch und Roll misst und per Bluetooth an dein Smartphone sendet.</dd>
-      
-      <dt>Wie funktioniert BLEvel?</dt>
-      <dd>BLEvel nutzt einen hochsensiblen Bewegungssensor (LSM6DS3) und einen ESP32-C3 Mikrocontroller. Die Daten werden 300 Mal pro Sekunde erfasst, gefiltert und 30 Mal pro Sekunde per Bluetooth übertragen.</dd>
-      
-      <dt>Wo kann BLEvel im Fahrzeug montiert werden?</dt>
-      <dd>Bevorzugt auf einer festen, waagerechten Fläche, z. B. im Schrankboden oder unter dem Bettkasten. Die Logo-Seite sollte in Fahrtrichtung zeigen.</dd>
-      
-      <dt>Wie wird BLEvel kalibriert?</dt>
-      <dd>Fahre dein Fahrzeug auf eine absolut ebene Fläche und führe in der BLEvel-App den Kalibrier-Befehl aus. Die aktuellen Messwerte werden als Nullpunkt gespeichert.</dd>
-      
-      <dt>Wie oft werden die Daten in der App aktualisiert?</dt>
-      <dd>Mit 30 Hz – also alle ca. 33 ms – werden die gefilterten Neigungswerte per BLE übertragen.</dd>
-      
-      <dt>Wie genau ist die Messung?</dt>
-      <dd>Dank 300 Hz Abtastrate und Filterung ist sie sehr präzise und nahezu verzögerungsfrei.</dd>
-      
-      <dt>Muss BLEvel nach dem Ausschalten neu kalibriert werden?</dt>
-      <dd>Nein, die Kalibrierung bleibt dauerhaft gespeichert.</dd>
-      
-      <dt>Wo kann ich BLEvel kaufen?</dt>
-      <dd>BLEvel ist derzeit über unseren Online-Shop oder direkt bei uns erhältlich. (Details dazu folgen)</dd>
-    </dl>
-  </section>
+<section id="faq" class="section-light fade-in">
+  <h2>FAQ</h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">Was ist BLEvel?</div>
+      <div class="faq-answer">
+        <p>Ein präzises, digitales Nivelliersystem für Wohnmobile und Campervans, das Pitch und Roll misst und per Bluetooth an dein Smartphone sendet.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Wie funktioniert BLEvel?</div>
+      <div class="faq-answer">
+        <p>BLEvel nutzt einen hochsensiblen Bewegungssensor (LSM6DS3) und einen ESP32-C3 Mikrocontroller. Die Daten werden 300 Mal pro Sekunde erfasst, gefiltert und 30 Mal pro Sekunde per Bluetooth übertragen.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Wo kann BLEvel im Fahrzeug montiert werden?</div>
+      <div class="faq-answer">
+        <p>Bevorzugt auf einer festen, waagerechten Fläche, z. B. im Schrankboden oder unter dem Bettkasten. Die Logo-Seite sollte in Fahrtrichtung zeigen.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Wie wird BLEvel kalibriert?</div>
+      <div class="faq-answer">
+        <p>Fahre dein Fahrzeug auf eine absolut ebene Fläche und führe in der BLEvel-App den Kalibrier-Befehl aus. Die aktuellen Messwerte werden als Nullpunkt gespeichert.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Wie oft werden die Daten in der App aktualisiert?</div>
+      <div class="faq-answer">
+        <p>Mit 30 Hz – also alle ca. 33 ms – werden die gefilterten Neigungswerte per Bluetooth übertragen.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Wie genau ist die Messung?</div>
+      <div class="faq-answer">
+        <p>Dank 300 Hz Abtastrate und Filterung ist sie sehr präzise und nahezu verzögerungsfrei.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Muss BLEvel nach dem Ausschalten neu kalibriert werden?</div>
+      <div class="faq-answer">
+        <p>Nein, die Kalibrierung bleibt dauerhaft gespeichert.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Wo kann ich BLEvel kaufen?</div>
+      <div class="faq-answer">
+        <p>BLEvel ist derzeit leider noch nicht erhältlich. (Details dazu folgen)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ergänzende Styles für den FAQ-Bereich -->
+<style>
+  .faq-container {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  .faq-item {
+    border-bottom: 1px solid #444;
+    padding: 15px 0;
+  }
+  .faq-question {
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    padding-right: 30px;
+    transition: color 0.3s ease;
+  }
+  .faq-question:hover {
+    color: #fff;
+  }
+  .faq-question::after {
+    content: "\25BC";
+    position: absolute;
+    right: 0;
+    transition: transform 0.3s ease;
+  }
+  .faq-item.active .faq-question::after {
+    transform: rotate(180deg);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-top: 10px;
+  }
+  .faq-item.active .faq-answer {
+    max-height: 500px; /* sollte groß genug für längere Antworten sein */
+  }
+  .faq-answer p {
+    margin: 0;
+    line-height: 1.6;
+  }
+</style>
+
+<!-- JavaScript zum Umschalten der FAQ-Antworten -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', function() {
+        item.classList.toggle('active');
+      });
+    });
+  });
+</script>
 
   <!-- Footer -->
   <footer class="fade-in">
