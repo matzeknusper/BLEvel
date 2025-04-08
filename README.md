@@ -3,8 +3,7 @@
 **BLEvel** ist ein präzises, digitales Neigungsmesssystem (Pitch & Roll) für Wohnmobile, Campervans und DIY-Projekte.  
 Es misst kontinuierlich die Fahrzeuglage und überträgt die gefilterten Werte per **Bluetooth Low Energy (BLE)** an ein Smartphone oder Tablet – in Echtzeit.
 
-![BLEvel Vorschau](assets/blevel_cover.jpg)
-
+![BLEvel Vorschau](blevel-produktbild.jpg)
 ---
 
 ## Features
