@@ -28,6 +28,26 @@
     }
 
     /* Hero-Bereich */
+/* Buttons im Hero */
+.hero .btn{
+  background:#1f1f1f;
+  padding:15px 30px;
+  border-radius:4px;
+  color:#e0e0e0;
+  font-size:1rem;
+  text-decoration:none;
+  display:inline-block;
+  transition:background .3s ease;
+}
+.hero .btn:hover{background:#333}
+
+.hero-btns{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin-top:20px;
+}
     .hero {
       background: url("hero_van_sunset.jpg") center center/cover no-repeat;
       position: relative;
@@ -140,25 +160,34 @@
   </style>
 </head>
 <body>
-  <!-- Hero-Bereich -->
-  <header class="hero fade-in">
-    <div class="hero-content">
-      <h1>„Wir haben das Camper-Leben neu ausgerichtet.“</h1>
-      <h2 class="subtitle">Schluss mit Schräglage.</h2>
-      <p>
-        <strong>BLEvel</strong> ist ein präzises, digitales Nivelliersystem für Wohnmobile und Campervans.
-        Es misst Neigung und überträgt die Daten per Bluetooth Low Energy (BLE)
-        direkt auf dein Smartphone oder Tablet.
-      </p>
-      <button onclick="window.location.href='#was-ist-blevel';">Mehr erfahren</button>
-      <!-- GitHub-Link mit Logo -->
-      <div class="github-link">
-        <a href="https://github.com/matzeknusper/BLEvel" target="_blank">
-          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
-        </a>
-      </div>
+<!-- Hero-Bereich -->
+<header class="hero fade-in">
+  <div class="hero-content">
+
+    <h1>„Wir haben das Camper-Leben neu ausgerichtet.“</h1>
+    <h2 class="subtitle">Schluss mit Schräglage.</h2>
+
+    <p>
+      <strong>BLEvel</strong> ist ein präzises, digitales Nivelliersystem für
+      Wohnmobile und Campervans. Es misst die Neigung und überträgt die Daten
+      per Bluetooth Low Energy (BLE) direkt auf dein Smartphone oder Tablet.
+    </p>
+
+    <!-- Buttons -------------------------------------------------------- -->
+    <div class="hero-btns">
+      <a href="#was-ist-blevel" class="btn">Mehr erfahren</a>
+      <a href="Anleitung.html" class="btn">App-Anleitung</a>
     </div>
-  </header>
+
+    <!-- GitHub-Logo ---------------------------------------------------- -->
+    <div class="github-link">
+      <a href="https://github.com/matzeknusper/BLEvel" target="_blank" aria-label="GitHub">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
+      </a>
+    </div>
+
+  </div>
+</header>
 
   <!-- Was ist BLEvel -->
   <section id="was-ist-blevel" class="section-light fade-in">
